@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programowanie_Obiektowe_Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Projekt Zaliczeniowy" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="2" Width="800" CornerRadius="10" BorderThickness="5">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="#02b59d"></SolidColorBrush>
+            </Border.BorderBrush>
+            <Rectangle Grid.Row="2">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#02b59d"></SolidColorBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Border>
+        <StackPanel Grid.Row="0" Width="1000" Orientation="Horizontal">
+            <Label Content="Konwerter Jednostek" Width="1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Height="100" Width="1000" Orientation="Horizontal">
+            <Button Name="Jednostki_Miary" Height="40" Width="200" Content="Jednostki Miary" Click="Jednostki_Miary_Click" Margin="300 0 20 0" Foreground="Black" FontSize="20" Style="{StaticResource ButtonRound}">
+                <Button.Background>
+                    <SolidColorBrush Color="#02b59d"></SolidColorBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="Jednostki_Predkosci" Height="40" Width="200" Content="Jednostki Predkości" Click="Jednostki_Predkosci_Click" Foreground="Black" FontSize="20" Style="{StaticResource ButtonRound}">
+                <Button.Background>
+                    <SolidColorBrush Color="#02b59d"></SolidColorBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="800">
+            <Label Height="40" Width="150" Content="Imie: " Margin="20 0 0 0" VerticalAlignment="Bottom" Foreground="White" FontSize="20"></Label>
+            <Label Height="40" Width="150" Content="Ilość: " Margin="60 0 0 0" VerticalAlignment="Bottom" Foreground="White" FontSize="20"></Label>
+            <Label Height="40" Width="150" Content="Z: " Margin="10 0 0 0" VerticalAlignment="Bottom" Foreground="White" FontSize="20"></Label>
+            <Label Height="40" Width="150" Content="Na: " Margin="70 0 0 0" VerticalAlignment="Bottom" Foreground="White" FontSize="20"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Height="90" Width="800" VerticalAlignment="Bottom">
+            <TextBox Name="txtName" Width="200" Height="30" Margin="20 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
+            <TextBox Name="txtCurrency" Width="150" Height="30" Margin="10 0 0 0" PreviewTextInput="NumberValidationTextBox" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
+            <ComboBox Name="cmbFromCurrency" Width="170" Height="30" Margin="10 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
+            <Label Content="=" Height="30" Margin="15 0 0 0" FontSize="12" VerticalAlignment="Top" Foreground="White"/>
+            <ComboBox Name="cmbToCurrency" Width="170" Height="30" Margin="15 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Height="100" Width="1000" Orientation="Horizontal">
+            <Button Name="Konwertuj" Height="40" Width="200" Content="Konwertuj" Click="Konwertuj_Click" Margin="300 0 20 0" Foreground="Black" FontSize="20" Style="{StaticResource ButtonRound}">
+                <Button.Background>
+                    <SolidColorBrush Color="#02b59d"></SolidColorBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="Wyczysc" Height="40" Width="200" Content="Wyczyść" Click="Wyczysc_Click" Foreground="Black" FontSize="20" Style="{StaticResource ButtonRound}">
+                <Button.Background>
+                    <SolidColorBrush Color="#02b59d"></SolidColorBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
