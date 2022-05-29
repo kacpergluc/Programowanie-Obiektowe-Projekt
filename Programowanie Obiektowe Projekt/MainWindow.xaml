@@ -33,7 +33,7 @@
                     <SolidColorBrush Color="#02b59d"></SolidColorBrush>
                 </Button.Background>
             </Button>
-            <Button Name="Jednostki_Predkosci" Height="40" Width="200" Content="Jednostki Predkości" Click="Jednostki_Predkosci_Click" Foreground="White" FontSize="20" Style="{StaticResource ButtonRound}">
+            <Button Name="Jednostki_Predkosci" Height="40" Width="200" Content="Jednostki Prędkości" Click="Jednostki_Predkosci_Click" Foreground="White" FontSize="20" Style="{StaticResource ButtonRound}">
                 <Button.Background>
                     <SolidColorBrush Color="#02b59d"></SolidColorBrush>
                 </Button.Background>
