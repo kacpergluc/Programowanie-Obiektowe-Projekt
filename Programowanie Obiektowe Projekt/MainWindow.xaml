@@ -47,7 +47,7 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Height="90" Width="800" VerticalAlignment="Bottom">
             <TextBox Name="txtImie" Width="200" Height="30" Margin="20 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
-            <TextBox Name="txtilosc" Width="150" Height="30" Margin="10 0 0 0" PreviewTextInput="NumberValidationTextBox" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
+            <TextBox Name="txtIlosc" Width="150" Height="30" Margin="10 0 0 0" PreviewTextInput="NumberValidationTextBox" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
             <ComboBox Name="cmbZ" Width="170" Height="30" Margin="10 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
             <Label Content="=>" Height="30" Margin="10 0 0 0" FontSize="12" VerticalAlignment="Top" Foreground="White"/>
             <ComboBox Name="cmbNa" Width="170" Height="30" Margin="15 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
