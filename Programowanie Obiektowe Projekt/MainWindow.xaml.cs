@@ -23,6 +23,32 @@ namespace Programowanie_Obiektowe_Projekt
         public MainWindow()
         {
             InitializeComponent();
+            wynik.Content = "Hello world";
+        }
+
+        private void Jednostki_Miary_Click(object sender, RoutedEventArgs e)
+        {
+            wynik.Content = "Hello miary click";
+        }
+
+        private void Jednostki_Predkosci_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Konwertuj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Wyczysc_Click(object sender, RoutedEventArgs e)
+        {
+            wynik.Content = "";
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+
         }
     }
 }

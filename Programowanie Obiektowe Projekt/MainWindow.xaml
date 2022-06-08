@@ -47,10 +47,10 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Height="90" Width="800" VerticalAlignment="Bottom">
             <TextBox Name="txtImie" Width="200" Height="30" Margin="20 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
-            <TextBox Name="txtAmount" Width="150" Height="30" Margin="10 0 0 0" PreviewTextInput="NumberValidationTextBox" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
-            <ComboBox Name="cmbFrom" Width="170" Height="30" Margin="10 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
-            <Label Content="=" Height="30" Margin="15 0 0 0" FontSize="12" VerticalAlignment="Top" Foreground="White"/>
-            <ComboBox Name="cmbTo" Width="170" Height="30" Margin="15 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
+            <TextBox Name="txtilosc" Width="150" Height="30" Margin="10 0 0 0" PreviewTextInput="NumberValidationTextBox" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top"></TextBox>
+            <ComboBox Name="cmbZ" Width="170" Height="30" Margin="10 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
+            <Label Content="=>" Height="30" Margin="10 0 0 0" FontSize="12" VerticalAlignment="Top" Foreground="White"/>
+            <ComboBox Name="cmbNa" Width="170" Height="30" Margin="15 0 0 0" FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" MaxDropDownHeight="150"></ComboBox>
         </StackPanel>
         <StackPanel Grid.Row="3" Height="100" Width="1000" Orientation="Horizontal">
             <Button Name="Konwertuj" Height="40" Width="200" Content="Konwertuj" Click="Konwertuj_Click" Margin="300 0 20 0" Foreground="White" FontSize="20" Style="{StaticResource ButtonRound}">
@@ -63,6 +63,9 @@
                     <SolidColorBrush Color="#02b59d"></SolidColorBrush>
                 </Button.Background>
             </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Height="100" Width="1000" Orientation="Horizontal">
+            <Label Name="wynik" Height="80" Width="1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"></Label>
         </StackPanel>
     </Grid>
 </Window>
