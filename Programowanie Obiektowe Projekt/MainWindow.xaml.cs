@@ -40,10 +40,9 @@ namespace Programowanie_Obiektowe_Projekt
             dtJednostkiMairy.Columns.Add("Text");
             dtJednostkiMairy.Columns.Add("Value");
 
-            dtJednostkiMairy.Rows.Add("--Wybierz--", 0);
+            dtJednostkiMairy.Rows.Add("-Wybierz-", 0);
             dtJednostkiMairy.Rows.Add("mm", 1);
             dtJednostkiMairy.Rows.Add("cm", 10);
-            dtJednostkiMairy.Rows.Add("m", 1000);
             dtJednostkiMairy.Rows.Add("m", 1000);
             dtJednostkiMairy.Rows.Add("km", 1000000);
             dtJednostkiMairy.Rows.Add("cale", 25.4);
@@ -56,9 +55,10 @@ namespace Programowanie_Obiektowe_Projekt
             dtJednostkiPredkosci.Columns.Add("Text");
             dtJednostkiPredkosci.Columns.Add("Value");
 
-            dtJednostkiPredkosci.Rows.Add("--Wybierz--", 0);
+            dtJednostkiPredkosci.Rows.Add("-Wybierz-", 0);
             dtJednostkiPredkosci.Rows.Add("m/s", 1);
             dtJednostkiPredkosci.Rows.Add("km/h", 3.6);
+            dtJednostkiPredkosci.Rows.Add("mph", 2.24);
         }
 
         private void BindPole()
@@ -66,7 +66,7 @@ namespace Programowanie_Obiektowe_Projekt
             dtPole.Columns.Add("Text");
             dtPole.Columns.Add("Value");
 
-            dtPole.Rows.Add("--Wybierz--", 0);
+            dtPole.Rows.Add("-Wybierz-", 0);
             dtPole.Rows.Add("cm2", 0.0001);
             dtPole.Rows.Add("m2", 1);
             dtPole.Rows.Add("a", 100);
