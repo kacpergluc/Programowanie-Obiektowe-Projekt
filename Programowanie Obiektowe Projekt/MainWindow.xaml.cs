@@ -25,13 +25,14 @@ namespace Programowanie_Obiektowe_Projekt
     {
         public DataTable dtJednostkiMairy = new DataTable();
         public DataTable dtJednostkiPredkosci = new DataTable();
+        public DataTable dtPole = new DataTable();
 
         public MainWindow()
         {
             InitializeComponent();
             BindJednostkiMiary();
             BindJednostkiPredkosci();
-            wynik.Content = "Hello world";
+            BindPole();
         }
 
         private void BindJednostkiMiary()
@@ -58,8 +59,18 @@ namespace Programowanie_Obiektowe_Projekt
             dtJednostkiPredkosci.Rows.Add("--Wybierz--", 0);
             dtJednostkiPredkosci.Rows.Add("m/s", 1);
             dtJednostkiPredkosci.Rows.Add("km/h", 3.6);
-            dtJednostkiPredkosci.Rows.Add("mph", 2.24);
-            dtJednostkiPredkosci.Rows.Add("węzeł", 1.94);
+        }
+
+        private void BindPole()
+        {
+            dtPole.Columns.Add("Text");
+            dtPole.Columns.Add("Value");
+
+            dtPole.Rows.Add("--Wybierz--", 0);
+            dtPole.Rows.Add("cm2", 0.0001);
+            dtPole.Rows.Add("m2", 1);
+            dtPole.Rows.Add("a", 100);
+            dtPole.Rows.Add("he", 10000);
         }
 
         private void Jednostki_Miary_Click(object sender, RoutedEventArgs e)
@@ -82,6 +93,19 @@ namespace Programowanie_Obiektowe_Projekt
             cmbZ.SelectedIndex = 0;
 
             cmbNa.ItemsSource = dtJednostkiPredkosci.DefaultView;
+            cmbNa.DisplayMemberPath = "Text";
+            cmbNa.SelectedValuePath = "Value";
+            cmbNa.SelectedIndex = 0;
+        }
+
+        private void Pole_Click(object sender, RoutedEventArgs e)
+        {
+            cmbZ.ItemsSource = dtPole.DefaultView;
+            cmbZ.DisplayMemberPath = "Text";
+            cmbZ.SelectedValuePath = "Value";
+            cmbZ.SelectedIndex = 0;
+
+            cmbNa.ItemsSource = dtPole.DefaultView;
             cmbNa.DisplayMemberPath = "Text";
             cmbNa.SelectedValuePath = "Value";
             cmbNa.SelectedIndex = 0;
