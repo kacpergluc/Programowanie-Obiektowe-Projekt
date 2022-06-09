@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,12 +27,14 @@ namespace Programowanie_Obiektowe_Projekt
         public DataTable dtJednostkiMairy = new DataTable();
         public DataTable dtJednostkiPredkosci = new DataTable();
         public DataTable dtPole = new DataTable();
+        public DataTable dtHistoria = new DataTable();
 
         public MainWindow()
         {
             InitializeComponent();
             BindJednostkiMiary();
             BindJednostkiPredkosci();
+            BindHistoria();
             BindPole();
         }
 
@@ -71,6 +74,17 @@ namespace Programowanie_Obiektowe_Projekt
             dtPole.Rows.Add("m2", 1);
             dtPole.Rows.Add("a", 100);
             dtPole.Rows.Add("he", 10000);
+        }
+
+        private void BindHistoria()
+        {
+            dtHistoria.Columns.Add("Ilość");
+            dtHistoria.Columns.Add("Konwertuj Z");
+            dtHistoria.Columns.Add("Konwertuj Na");
+            dtHistoria.Columns.Add("ilość po konwersji");
+            dtHistoria.Columns.Add("Data");
+
+            dtHistoriaView.DataContext = dtHistoria.DefaultView;
         }
 
         private void Jednostki_Miary_Click(object sender, RoutedEventArgs e)
@@ -142,12 +156,14 @@ namespace Programowanie_Obiektowe_Projekt
                 KonwValue = double.Parse(txtIlosc.Text);
 
                 wynik.Content = KonwValue.ToString() + " " + cmbNa.Text;
+                dtHistoria.Rows.Add(txtIlosc.Text, cmbZ.Text, cmbNa.Text, wynik.Content, DateTime.Now);
             }
             else
             {
                 KonwValue = (double.Parse(cmbZ.SelectedValue.ToString()) * double.Parse(txtIlosc.Text)) / double.Parse(cmbNa.SelectedValue.ToString());
 
                 wynik.Content = KonwValue.ToString() + " " + cmbNa.Text;
+                dtHistoria.Rows.Add(txtIlosc.Text, cmbZ.Text, cmbNa.Text, wynik.Content, DateTime.Now);
             }
         }
 
