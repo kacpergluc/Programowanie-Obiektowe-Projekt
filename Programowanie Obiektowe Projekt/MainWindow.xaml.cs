@@ -130,21 +130,21 @@ namespace Programowanie_Obiektowe_Projekt
 
             if (txtIlosc.Text == null || txtIlosc.Text.Trim() == "")
             {
-                MessageBox.Show("Wprowadż wartość", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Wprowadż wartość!", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 txtIlosc.Focus();
                 return;
             }
             else if (cmbZ.SelectedValue == null || cmbZ.SelectedIndex == 0)
             {
-                MessageBox.Show("Wybierz jednostkę Z", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Wybierz jednostkę Z!", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 cmbZ.Focus();
                 return;
             }
             else if (cmbNa.SelectedValue == null || cmbNa.SelectedIndex == 0)
             {
-                MessageBox.Show("Wybierz jednostkę Na", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Wybierz jednostkę Na!", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 cmbNa.Focus();
                 return;
@@ -152,10 +152,8 @@ namespace Programowanie_Obiektowe_Projekt
 
             if (cmbZ.Text == cmbNa.Text)
             {
-                KonwValue = double.Parse(txtIlosc.Text);
-
-                wynik.Content = KonwValue.ToString() + " " + cmbNa.Text;
-                dtHistoria.Rows.Add(txtIlosc.Text, cmbZ.Text, cmbNa.Text, wynik.Content, DateTime.Now);
+                MessageBox.Show("Wybrano tą samą jednostkę!", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
             }
             else
             {
