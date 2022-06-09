@@ -59,9 +59,8 @@ namespace Programowanie_Obiektowe_Projekt
             dtJednostkiPredkosci.Columns.Add("Value");
 
             dtJednostkiPredkosci.Rows.Add("-Wybierz-", 0);
-            dtJednostkiPredkosci.Rows.Add("m/s", 1);
-            dtJednostkiPredkosci.Rows.Add("km/h", 3.6);
-            dtJednostkiPredkosci.Rows.Add("mph", 2.24);
+            dtJednostkiPredkosci.Rows.Add("km/h", 1);
+            dtJednostkiPredkosci.Rows.Add("mph", 1.61);
         }
 
         private void BindPole()
